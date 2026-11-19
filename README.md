@@ -7,6 +7,14 @@
   <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square" alt="Python 3.10 or newer"></a>
 </p>
 
+> [!NOTE]
+> OMINI was originally developed in September 2024. With the rapid progress of
+> generative models, some model-dependent components of the original pipeline
+> are no longer up to date. This release therefore focuses on reusable Blender
+> utilities that we believe remain useful for future research, including
+> automatic camera calibration, rendering, shadow handling, and background
+> compositing.
+
 ### 🌟 Overview
 
 This repository provides the **automatic camera calibration** and **Blender rendering**
