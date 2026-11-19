@@ -1,0 +1,5 @@
+# Install with the Python interpreter shipped with your Blender version.
+# NumPy <2 keeps compatibility with Blender 3.6's bundled Python extensions.
+numpy>=1.23.5,<2
+scipy>=1.10,<1.14
+opencv-python-headless>=4.8,<4.11
