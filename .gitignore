@@ -8,6 +8,22 @@ __pycache__/
 ._*
 outputs/
 demo_assets/
+# Local-only initialization/comparison helpers; not part of the release.
+/examples/
+# Test media and asset bundles must stay local, including outside outputs/.
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.bmp
+*.gif
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
 *.blend
 *.blend1
 *.blend2

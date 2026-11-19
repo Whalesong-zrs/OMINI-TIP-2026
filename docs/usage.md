@@ -27,6 +27,8 @@ docs/PROVENANCE.md    # source lineage and intentionally excluded components
 - No GPU is required. Use `--device cpu` for the portable smoke test.
 - OBJ, GLB and GLTF inputs are supported. Keep OBJ/MTL/texture sidecars together;
   GLB with embedded materials is the easiest portable input.
+- Bake skeletal poses and geometry modifiers before fitting; calibration reads
+  static mesh geometry, not evaluated rigged or modifier-driven shapes.
 
 The code includes Blender 3.6/4.x import branches; see
 [VALIDATION.md](VALIDATION.md) for versions actually tested. A compatibility
@@ -112,7 +114,8 @@ wrapper. Paths containing spaces are supported; keep the shell quotes.
   Cycles for each candidate. Retained coarse and refined candidates are reranked
   on the full mesh. Optimizer budget/convergence is recorded explicitly.
 - Camera fitting is silhouette alignment, not verified physical camera recovery;
-  symmetric geometry, occlusion, segmentation errors and shape errors can cause ambiguity.
+  similar front/back silhouettes can remain ambiguous even with high mask overlap.
+  Occlusion, segmentation errors and shape errors can also affect alignment.
 
 Outputs include `camera.json`, `scene.blend`, `target_mask.png`, `aligned_mask.png`
 and `mask_overlay.png`. Imported image textures are packed into the saved scene.
@@ -169,8 +172,9 @@ Run `--help` after the Blender argument separator `--` for the complete options.
 - A nonempty output directory is always refused. There is no recursive-delete
   or overwrite option. Source meshes/images/scenes are never modified.
 - Generated demo assets, `.blend`/EXR files, renders, dependencies, caches and
-  credentials are ignored by Git. Only code, documentation and tests are intended
-  for the private repository.
+  credentials are ignored by Git. The local-only `examples/` comparison helpers
+  and test media/asset bundles are also excluded. Only code, documentation and
+  tests are intended for the private repository.
 - Unit tests, using the same isolated dependencies installed above:
 
   ```bash

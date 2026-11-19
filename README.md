@@ -28,6 +28,8 @@ components of OMINI:
 The current release focuses on these two components. Users provide the 3D asset
 and mask; reconstruction, texture optimization, and illumination estimation or
 VLM-based correction are outside this repository's scope.
+Only source code, documentation, and tests are included; local test assets,
+comparison helpers, and rendered results are not distributed.
 
 ### 💻 Installation
 
@@ -57,7 +59,7 @@ Run all commands below from the repository root.
 
 ### 🔧 Inputs and Configuration
 
-- **3D asset:** an OBJ, GLB, or GLTF file with its materials/textures.
+- **3D asset:** a static or baked OBJ, GLB, or GLTF file with its materials/textures.
 - **Target mask:** a grayscale mask or RGBA alpha in the **original image coordinates**.
   Do not use a recentered or resized object-upload cutout.
 - **Background:** an optional image with the target already removed and inpainted.
@@ -80,6 +82,8 @@ No model download or external API configuration is needed.
 
 The output includes `camera.json`, `scene.blend`, and mask-alignment previews.
 The original image is optional and is used only for the overlay.
+Calibration optimizes silhouette alignment, not image appearance, so front/back
+ambiguity can remain. Inspect the exported previews before rendering.
 
 #### Blender rendering
 
