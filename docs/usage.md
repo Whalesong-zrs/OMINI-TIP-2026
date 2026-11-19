@@ -174,14 +174,14 @@ Run `--help` after the Blender argument separator `--` for the complete options.
 - Generated demo assets, `.blend`/EXR files, renders, dependencies, caches and
   credentials are ignored by Git. The local-only `examples/` comparison helpers
   and test media/asset bundles are also excluded. Only code, documentation and
-  tests are intended for the private repository.
+  tests are included in this source release.
 - Unit tests, using the same isolated dependencies installed above:
 
   ```bash
   PYTHONPATH=".blender-deps/$PY_TAG" "$BLENDER_PYTHON" -m unittest discover -s tests -v
   ```
 - Synthetic checks establish basic operation only, not accuracy on arbitrary user assets.
-- No open-source license is selected yet. Keep this review repository private
-  until the authors choose a license and approve the release scope.
+- No license has been specified yet. License selection will be confirmed by the
+  authors.
 
 See [provenance and scope](PROVENANCE.md) for the extraction history.

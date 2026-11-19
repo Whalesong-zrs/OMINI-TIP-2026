@@ -113,5 +113,5 @@ For a runnable example with locally generated assets, follow the
 
 ### 📄 License
 
-A code license will be confirmed before the public release. This repository
-currently remains private for review.
+No license has been specified yet. License selection will be confirmed by the
+authors.

@@ -54,8 +54,8 @@ is outside this package.
 
 ## Distribution status
 
-Prepared as a private review repository. No open-source license has been chosen
-or granted by this packaging step. Confirm the authors' license choice and
-rights to any example assets before changing repository visibility. The example
-generator creates synthetic geometry/images locally; it does not redistribute
-paper assets or third-party model weights.
+This public source release is limited to camera calibration and Blender
+rendering/compositing. No license has been specified yet. License selection will
+be confirmed by the authors. The example generator creates synthetic
+geometry/images locally; it does not redistribute paper assets or third-party
+model weights.

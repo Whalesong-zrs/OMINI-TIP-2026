@@ -53,4 +53,4 @@ executed in this validation run. OBJ import has version-specific code paths,
 but this end-to-end fixture uses GLB. Arbitrary skeletal animation and full
 multi-object scene reconstruction are outside the first release's scope.
 
-No open-source license or public release is implied by this private review.
+See the [README](../README.md) for the current license status.
