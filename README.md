@@ -1,4 +1,4 @@
-## OMINI: Towards Consistent 3D Object Manipulation via Generative Texturing and Adaptive Lighting｜IEEE TIP
+## OMINI: Towards Consistent 3D Object Manipulation via Generative Texturing and Adaptive Lighting｜IEEE TIP 2026
 
 <p align="center">
   <strong>Camera Calibration &amp; Blender Rendering</strong><br><br>
